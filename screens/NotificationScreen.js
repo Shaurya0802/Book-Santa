@@ -66,8 +66,7 @@ export default class NotificationScreen extends Component{
           <MyHeader title={"Notifications"} navigation={this.props.navigation}/>
         </View>
         <View style={{flex:0.9}}>
-          {
-            this.state.allNotifications.length === 0
+          {this.state.allNotifications.length === 0
             ?(
               <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
                 <Text style={{fontSize:25}}>You have no notifications</Text>
@@ -75,8 +74,7 @@ export default class NotificationScreen extends Component{
             )
             :(
               <SwipeableFlatlist allNotifications={this.state.allNotifications}/>
-            )
-          }
+          )}
         </View>
       </View>
     )
